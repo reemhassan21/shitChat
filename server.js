@@ -7,11 +7,21 @@ const formatMessage = require('./Utils/messages')
 const {userJoin, getCurrentUser, getRoomUsers} = require('./Utils/users')
 
 const app = express();
-const PORT  = 3000 || process.env.PORT;
+const PORT  = process.env.PORT|| '3000'  ;
 const server = http.createServer(app);
 const io =socketio(server);  
 app.use(express.static(path.join(__dirname,"public")));
-
+// app.get("/",(req,res)=>{ 
+//     res.setHeader("content-type","text/html"); 
+//     res.sendFile(path.join(__dirname, "./public/index.html"));
+// })
+// app.get("/favicon.ico",(req,res)=>{ 
+//     res.setHeader("content-type","text/html"); 
+//     res.sendFile(path.join(__dirname, "./public/index.html"));
+// })
+// app.get("/style.css",(req,res)=>{
+//     res.sendFile(path.join(__dirname , "./public/css/style.css"))
+// })
 io.on("connection", socket => { 
     socket.on('join room', ({username, room}) => {
         roomUsers=getRoomUsers(room)
@@ -30,10 +40,6 @@ io.on("connection", socket => {
 
        
     })
-   
-   
-
-  
 })
 
 server.listen(PORT , ()=>{console.log("localhost:3000")});

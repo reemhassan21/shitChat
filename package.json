@@ -1,11 +1,11 @@
 {
-  "name": "Besties",
+  "name": "reeime's",
   "version": "1.0.0",
   "description": "real-time chat app with rooms",
-  "main": "server.js",
+  "main":"server.js",
   "scripts": {
-    "start": "node server",
-    "dev": "nodemon server"
+    "start":"node server",
+    "dev":"nodemon server"
   },
   "dependencies": {
     "express": "^4.17.3",
