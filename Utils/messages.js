@@ -4,7 +4,7 @@ function formatMessage(username, text){
     return {
         username,
         text,
-        time:moment.add(2, 'hours').format('HH:mm a') 
+        time:moment(self).tz('cairo/Egypt')
         
     }
 }
