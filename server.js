@@ -23,8 +23,7 @@ app.use(express.static(path.join(__dirname,"public")));
 //     res.sendFile(path.join(__dirname , "./public/css/style.css"))
 // })
 io.on("connection", socket => { 
-    socket.on('join room', ({username, room}) => {
-        roomUsers=getRoomUsers(room)
+    socket.on('join room', ({username, room}) => { 
         socket.broadcast.to(room).emit('message', formatMessage("ChatBot", `${username} has joined the chat`))
       
         socket.join(room)
