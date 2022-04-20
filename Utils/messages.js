@@ -4,7 +4,7 @@ function formatMessage(username, text){
     return {
         username,
         text,
-        time:moment().hour(2).format('hh:mm a') 
+        time:moment().hour(1).format('hh:mm a') 
         
     }
 }
