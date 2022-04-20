@@ -4,7 +4,7 @@ function formatMessage(username, text){
     return {
         username,
         text,
-        time:moment().parseZone().format('hh:mm a') 
+        time:moment(LT)
         
     }
 }
