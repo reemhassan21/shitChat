@@ -4,8 +4,8 @@ function formatMessage(username, text){
     return {
         username,
         text,
-        time:moment.defaultFormatUtc()
-
+        time:moment.utc().format('HH:mm a') 
+        
     }
 }
 
