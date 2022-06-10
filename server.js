@@ -10,18 +10,7 @@ const app = express();
 const PORT  = process.env.PORT|| '3000'  ;
 const server = http.createServer(app);
 const io =socketio(server);  
-app.use(express.static(path.join(__dirname,"public")));
-// app.get("/",(req,res)=>{ 
-//     res.setHeader("content-type","text/html"); 
-//     res.sendFile(path.join(__dirname, "./public/index.html"));
-// })
-// app.get("/favicon.ico",(req,res)=>{ 
-//     res.setHeader("content-type","text/html"); 
-//     res.sendFile(path.join(__dirname, "./public/index.html"));
-// })
-// app.get("/style.css",(req,res)=>{
-//     res.sendFile(path.join(__dirname , "./public/css/style.css"))
-// })
+app.use(express.static(path.join(__dirname,"public"))); 
 io.on("connection", socket => { 
     socket.on('join room', ({username, room}) => { 
         socket.broadcast.to(room).emit('message', formatMessage("ChatBot", `${username} has joined the chat`))

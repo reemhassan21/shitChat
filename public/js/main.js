@@ -2,8 +2,7 @@ const chatForm = document.getElementById('chat-form')
 const socket=io();
 const chatMsg = document.querySelector('.chat-messages') 
 
-
-var time = moment()
+ 
 const {username, room }= Qs.parse(location.search,{
     ignoreQueryPrefix: true
 })
