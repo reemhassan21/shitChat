@@ -1,10 +1,10 @@
 const moment = require('moment'); 
 function formatMessage(username, text){
-
+ var today = new Date();
     return {
         username,
         text,
-        time: moment().format('LT')
+        time: today.getHours()
         
     }
 }
