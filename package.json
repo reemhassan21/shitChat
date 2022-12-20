@@ -2,13 +2,13 @@
   "name": "reeime's",
   "version": "1.0.0",
   "description": "real-time chat app with rooms",
-  "main":"server.js",
+  "main": "server.js",
   "scripts": {
-    "start":"node server",
-    "dev":"nodemon server"
+    "start": "node server",
+    "dev": "nodemon server"
   },
   "dependencies": {
-    "express": "^4.17.3",
+    "express": "^4.18.2",
     "moment": "^2.29.2",
     "nodemon": "^2.0.15",
     "socket.io": "^4.4.1"
