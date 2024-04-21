@@ -1,0 +1,2 @@
+# shitChat
+nodeJs Chatting app
